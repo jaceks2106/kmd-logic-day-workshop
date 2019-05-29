@@ -1,5 +1,5 @@
 # KMD Logic Day - Workshop
-Example client, that sends SMS and audits events through Logic Gateway. Whole application was written during the Logic Day Workshop.
+Example client, that sends SMS and audits events through Logic API. Whole application was written during the Logic Day Workshop.
 
 ## Usage
 1. (Go to step 3, if you configured SMS provider in Logic Console) Go to [Twilio](https://www.twilio.com/) or [LINK Mobility](https://www.linkmobility.com/) and create account.
@@ -9,3 +9,7 @@ Example client, that sends SMS and audits events through Logic Gateway. Whole ap
 5. Fulfill parameters in `LogicEnvironment.cs` file.
 6. In `Program.cs` change local variable `toPhoneNumber` to destination phone number.
 7. Run solution.
+
+## Essential links
+1. Logic Console -> https://console.kmdlogic.io
+2. Logic API example clients -> https://github.com/kmdlogic/
