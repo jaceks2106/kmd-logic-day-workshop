@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicWorkshopOfficialExample", "LogicWorkshopOfficialExample\LogicWorkshopOfficialExample.csproj", "{804DD83A-3D40-44FB-97B2-9DE061188F1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{804DD83A-3D40-44FB-97B2-9DE061188F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804DD83A-3D40-44FB-97B2-9DE061188F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804DD83A-3D40-44FB-97B2-9DE061188F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804DD83A-3D40-44FB-97B2-9DE061188F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EEAB91B-46E7-442F-B2DC-9D9B2678A2AD}
+	EndGlobalSection
+EndGlobal
