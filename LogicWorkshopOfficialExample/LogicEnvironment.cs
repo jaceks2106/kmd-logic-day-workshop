@@ -10,7 +10,7 @@ namespace LogicWorkshopOfficialExample
 
         public static string UriAuthorizationServer = "https://login.microsoftonline.com/logicidentityprod.onmicrosoft.com/oauth2/v2.0/token";
         public static string ClientId = ""; // Console -> Subscriptions -> Client Credentials -> client_id
-        public static string Scope = "https://logicidentityprod.onmicrosoft.com/bb159109-0ccd-4b08-8d0d-80370cedda84/.default";
+        public static string Scope = ""; // Console -> Subscriptions -> Client Credentials -> scope
         public static string ClientSecret = ""; // Console -> Subscriptions -> Client Credentials -> client_secret
 
         public static string SerilogAzureEventHubConnectionString = ""; // Console -> Audit -> Instances -> Primary

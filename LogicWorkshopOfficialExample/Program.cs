@@ -16,7 +16,7 @@ namespace LogicWorkshopOfficialExample
             InitAudit();
 
             string messageBody = "Hello World!";
-            string toPhoneNumber = "+4866****90";
+            string toPhoneNumber = "";
 
             await SmsSender.SendAsync(messageBody, toPhoneNumber);
 

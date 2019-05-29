@@ -10,30 +10,36 @@ namespace LogicWorkshopOfficialExample
     {
         internal static async Task SendAsync(string messageBody, string toPhoneNumber)
         {
-            // 1. Uzyskaj token
+            // 1. Acquire token
             TokenResponse token = await RequestToken();
 
-            // 2. Utworz request
+            // 2. Prepare request
             SmsRequest request = new SmsRequest(toPhoneNumber, messageBody, LogicEnvironment.SmsConfigurationId);
 
-            // 3. Wyslij request
+            // 3. Send request
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue("Bearer", token.access_token);
 
-                // 4. Odbierz response
                 var response = await client.PostAsJsonAsync(
                     new Uri(LogicEnvironment.LogicApiUrl, $"subscriptions/{LogicEnvironment.SubscriptionId}/sms"),
                     request);
 
-                // 5. Dodaj do audytu
+                // 4. Get the response message
+                var responseMessage = await response.Content.ReadAsAsync<SmsResponse>();
+
+                // 5. Audit an event
+                var userId = "xyz@kmd.dk";
+                Console.WriteLine($"SMS message with id {responseMessage.SmsMessageId} for configuration {LogicEnvironment.SmsConfigurationId} has been sent by {userId} to '{toPhoneNumber}");
                 Program.AuditInstance
                     .ForContext("user", "swr")
                     .Write(
-                        "Wiadomość dla konfiguracji {ConfigurationId} została wysłana przez użytkownika {UserId}",
+                        "SMS message with id {SmsMessageId} for configuration {ConfigurationId} has been sent by {UserId} to '{ToPhoneNumber}'",
+                        responseMessage.SmsMessageId,
                         LogicEnvironment.SmsConfigurationId,
-                        "swr@kmd.dk");
+                        userId,
+                        toPhoneNumber);
             }
         }
 
