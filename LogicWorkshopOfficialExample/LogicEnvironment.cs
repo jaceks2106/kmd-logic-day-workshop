@@ -5,16 +5,16 @@ namespace LogicWorkshopOfficialExample
     public static class LogicEnvironment
     {
         public static Uri LogicApiUrl = new Uri("https://kmd-logic-api-prod-webapp.azurewebsites.net");
-        public static Guid SubscriptionId = Guid.Parse("");
-        public static Guid SmsConfigurationId = Guid.Parse("");
+        public static Guid SubscriptionId = Guid.Parse(""); // Console -> Subscriptions -> Subscription Id
+        public static Guid SmsConfigurationId = Guid.Parse(""); // Console -> SMS -> Providers -> Configuration Id
 
         public static string UriAuthorizationServer = "https://login.microsoftonline.com/logicidentityprod.onmicrosoft.com/oauth2/v2.0/token";
-        public static string ClientId = "";
+        public static string ClientId = ""; // Console -> Subscriptions -> Client Credentials -> client_id
         public static string Scope = "https://logicidentityprod.onmicrosoft.com/bb159109-0ccd-4b08-8d0d-80370cedda84/.default";
-        public static string ClientSecret = "";
+        public static string ClientSecret = ""; // Console -> Subscriptions -> Client Credentials -> client_secret
 
-        public static string SerilogAzureEventHubConnectionString = "";
+        public static string SerilogAzureEventHubConnectionString = ""; // Console -> Audit -> Instances -> Primary
 
-        public static string SerilogAzureEventHubEventSource = "";
+        public static string SerilogAzureEventHubEventSource = ""; // Your custom name to identify, who sent the event. It can be changed anytime.
     }
 }
