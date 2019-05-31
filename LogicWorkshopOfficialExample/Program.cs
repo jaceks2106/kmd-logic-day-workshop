@@ -7,7 +7,6 @@ namespace LogicWorkshopOfficialExample
 {
     class Program
     {
-        // Example client, that sends SMS and audits events through Logic Gateway. Whole application was written during the Logic Day Workshop.
 
         public static IAudit AuditInstance { get; set; }
 
@@ -15,10 +14,7 @@ namespace LogicWorkshopOfficialExample
         {
             InitAudit();
 
-            string messageBody = "Hello World!";
-            string toPhoneNumber = "";
-
-            await SmsSender.SendAsync(messageBody, toPhoneNumber);
+            await SmsSender.SendAsync(LogicEnvironment.SMSMessageBody, LogicEnvironment.ToPhoneNumber);
 
             Console.ReadKey();
         }

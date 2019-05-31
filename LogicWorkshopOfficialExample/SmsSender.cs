@@ -23,7 +23,7 @@ namespace LogicWorkshopOfficialExample
                     new AuthenticationHeaderValue("Bearer", token.access_token);
 
                 var response = await client.PostAsJsonAsync(
-                    new Uri(LogicEnvironment.LogicApiUrl, $"subscriptions/{LogicEnvironment.SubscriptionId}/sms"),
+                    new Uri(new Uri(LogicEnvironment.LogicApiUrl), $"subscriptions/{LogicEnvironment.SubscriptionId}/sms"),
                     request);
 
                 // 4. Get the response message
