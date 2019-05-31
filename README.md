@@ -6,7 +6,7 @@ Example client, that sends SMS and audits events through Logic API. Whole applic
 2. Login at [Logic Console](https://console.kmdlogic.io) and configure new SMS provider.
 3. [Download and install .NET Core 2.2](https://dotnet.microsoft.com/download)
 4. Open solution in Visual Studio 2017 / 2019
-5. Fulfill parameters in `LogicEnvironment.cs` file.
+5. Fulfill parameters in `LogicEnvironment.cs` file. Each parameter must not be empty.
 6. In `Program.cs` change local variable `toPhoneNumber` to destination phone number.
 7. Run solution.
 
